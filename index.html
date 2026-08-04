@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#102114" />
+  <title>Plantain Leaf AR Reveal</title>
+
+  <link rel="stylesheet" href="./src/styles.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "mindar-image-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main id="ar-container" aria-label="Augmented reality camera view"></main>
+
+  <section id="launch-screen" class="panel launch-screen">
+    <div class="eyebrow">NEWSPAPER AR PROTOTYPE</div>
+    <h1>Watch the feast appear</h1>
+    <p>Allow camera access, then point your phone at the empty plantain leaf.</p>
+    <button id="start-button" class="primary-button" type="button">Start AR</button>
+    <a class="secondary-link" href="./preview.html">Open alignment preview</a>
+  </section>
+
+  <div id="scanner-ui" class="scanner-ui is-hidden" aria-live="polite">
+    <div class="scanner-frame" aria-hidden="true">
+      <span class="corner corner-a"></span>
+      <span class="corner corner-b"></span>
+      <span class="corner corner-c"></span>
+      <span class="corner corner-d"></span>
+    </div>
+    <div id="status-pill" class="status-pill">Point at the empty leaf</div>
+  </div>
+
+  <button id="stop-button" class="stop-button is-hidden" type="button"
+          aria-label="Stop augmented reality">×</button>
+
+  <section id="error-panel" class="panel error-panel is-hidden" role="alert">
+    <h2>AR could not start</h2>
+    <p id="error-message"></p>
+    <p class="small">
+      Check that <code>assets/targets.mind</code> exists, camera permission is allowed,
+      and the page is running on HTTPS or localhost.
+    </p>
+  </section>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

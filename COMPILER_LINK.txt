@@ -1,0 +1,2 @@
+Official MindAR Image Targets Compiler:
+https://hiukim.github.io/mind-ar-js-doc/tools/compile/

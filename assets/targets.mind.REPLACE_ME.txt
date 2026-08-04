@@ -1,0 +1,2 @@
+Compile target-empty-leaf.png with the official MindAR Image Targets Compiler,
+download targets.mind, and place it in this folder as assets/targets.mind.

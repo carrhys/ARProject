@@ -1,0 +1,9 @@
+{
+  "name": "mindar-plantain-leaf-ar",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MindAR + Three.js plantain leaf newspaper AR prototype",
+  "scripts": {
+    "serve": "python -m http.server 8080"
+  }
+}
